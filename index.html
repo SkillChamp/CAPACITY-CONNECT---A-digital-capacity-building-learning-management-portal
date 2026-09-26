@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Capacity Connect - MoES Digital Capacity Building and Learning Management Portal">
+  <title>Capacity Connect | MoES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing">
+  <div class="landing-bg"></div>
+  <main class="auth-shell">
+    <section class="brand-panel">
+      <div class="brand-mark"><span>CC</span></div>
+      <p class="eyebrow">MINISTRY OF EARTH SCIENCES · GOVERNMENT OF INDIA</p>
+      <h1>Capacity<br><em>Connect</em></h1>
+      <p class="brand-copy">A unified digital capacity-building and learning management portal for organizational training, competency development and knowledge sharing.</p>
+      <div class="brand-pills">
+        <span>Learning</span><span>Competency</span><span>Knowledge</span>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <div class="auth-head">
+        <div>
+          <p class="eyebrow">WELCOME BACK</p>
+          <h2>Sign in to your portal</h2>
+        </div>
+        <div class="security-badge">● Secure access</div>
+      </div>
+
+      <div class="role-tabs" role="tablist" aria-label="Select role">
+        <button class="role-tab active" data-role="trainee">Trainee</button>
+        <button class="role-tab" data-role="trainer">Trainer</button>
+        <button class="role-tab" data-role="admin">Admin</button>
+      </div>
+
+      <form id="loginForm">
+        <input type="hidden" id="role" value="trainee">
+        <label>Email address<input id="email" type="email" autocomplete="username" placeholder="name@organisation.gov.in" required></label>
+        <label>Password<div class="password-wrap"><input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button type="button" id="togglePassword">Show</button></div></label>
+        <div class="form-row"><label class="check"><input type="checkbox"> Remember me</label><a href="#" onclick="demoToast('Password reset flow is represented in this prototype.');return false">Forgot password?</a></div>
+        <button class="primary-btn" type="submit">Sign in <span>→</span></button>
+      </form>
+
+      <div class="demo-box">
+        <strong>Prototype demo access</strong>
+        <p>Select any role and use any valid-looking email with password <b>demo123</b>.</p>
+      </div>
+      <p class="signup-line">New to Capacity Connect? <a href="#" id="signupLink">Create an account</a></p>
+      <p class="prototype-note">Prototype only — authentication is simulated in browser storage. Production must use server-side authentication, HTTPS, secure sessions and role authorization.</p>
+    </section>
+  </main>
+
+  <div class="modal" id="signupModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <p class="eyebrow">NEW ACCOUNT</p><h2>Create your profile</h2>
+      <form id="signupForm">
+        <div class="form-grid">
+          <label>Full name<input required placeholder="Full name"></label>
+          <label>Organisation<input required placeholder="Organisation / Institute"></label>
+          <label>Email<input type="email" required placeholder="name@example.gov.in"></label>
+          <label>Role<select><option>Trainee</option><option>Trainer</option></select></label>
+          <label class="span-2">Password<input type="password" minlength="8" required placeholder="Minimum 8 characters"></label>
+        </div>
+        <button class="primary-btn" type="submit">Submit registration →</button>
+      </form>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

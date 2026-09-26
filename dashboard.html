@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Capacity Connect role-based dashboard prototype">
+  <title>Capacity Connect Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app">
+  <div class="role-bg" id="roleBg"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="side-brand"><div class="brand-mark small"><span>CC</span></div><div><b>Capacity</b><strong>Connect</strong><small>MoES · India</small></div></div>
+    <div class="role-chip" id="sideRole">Trainee workspace</div>
+    <nav id="nav"></nav>
+    <div class="side-bottom">
+      <button class="support" onclick="showPage('Help')">◉ <span>Help & Support</span></button>
+      <button class="logout" onclick="logout()">↪ <span>Sign out</span></button>
+    </div>
+  </aside>
+
+  <div class="mobile-top"><button id="menuBtn">☰</button><b>Capacity Connect</b><button onclick="showPage('Notifications')">◌</button></div>
+
+  <main class="workspace">
+    <header class="topbar">
+      <div><p class="eyebrow" id="dateLine">CAPACITY CONNECT</p><h1 id="pageTitle">Dashboard</h1></div>
+      <div class="top-actions">
+        <div class="search"><span>⌕</span><input id="globalSearch" placeholder="Search courses, resources..."></div>
+        <button class="icon-btn" onclick="showPage('Notifications')">◌<i>3</i></button>
+        <div class="user-menu"><div class="avatar" id="avatar">AM</div><div><b id="userName">Amit Maity</b><small id="userRole">Trainee</small></div></div>
+      </div>
+    </header>
+
+    <section id="page" class="page"></section>
+  </main>
+
+  <div class="modal" id="genericModal"><div class="modal-card wide"><button class="modal-close" data-close>×</button><div id="modalContent"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
